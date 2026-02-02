@@ -52,7 +52,7 @@ header {
     width: 20px;
     height: 20px;
     filter: brightness(0) saturate(100%) invert(55%) sepia(89%) saturate(2597%) hue-rotate(0deg) brightness(102%) contrast(106%);
-    /* Filtre pour rendre l'icône orange (#ff6f00) */
+    /* ici c'est pour rendre les icons la blanche */
 }
 
 .navigation a:hover {
@@ -62,7 +62,7 @@ header {
 
 .navigation a:hover .icon {
     filter: brightness(0) saturate(100%) invert(100%);
-    /* Filtre pour rendre l'icône blanche au hover */
+    /*cette partie la rends l'icon blanch lorsque je mets le curseur sur sur l'un des elements de la barre de navigation 
 }
 .barecherche {
     display: flex;
