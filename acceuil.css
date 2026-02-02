@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.navigation a .icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(55%) sepia(89%) saturate(2597%) hue-rotate(0deg) brightness(102%) contrast(106%);
+    /* Filtre pour rendre l'icône orange (#ff6f00) */
+}
+
+.navigation a:hover {
+    background-color: #ff6f00;
+    color: #ffffff;
+}
+
+.navigation a:hover .icon {
+    filter: brightness(0) saturate(100%) invert(100%);
+    /* Filtre pour rendre l'icône blanche au hover */
+}
+.barecherche {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.barecherche input {
+    padding: 12px 20px;
+    width: 300px;
+    background-color: #2a2a2a;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.barecherche input::placeholder {
+    color: #b0b0b0;
+}
+
+.barecherche input:focus {
+    border-color: #ff6f00;
+}
+
+.barecherche button {
+    padding: 12px 25px;
+    background-color: #ff6f00;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.barecherche button:hover {
+    background-color: #e66300;
+}
+.bouton-section {
+    padding: 30px 0;
+    background-color: #0d0d0d;
+}
+
+.filtres {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.filtre-btn {
+    padding: 15px 35px;
+    background-color: #2a2a2a;
+    color: #b0b0b0;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 1000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtre-btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.filtre-btn.active {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 2px solid #ff6f00;
+}
+
+.filtre-btn.active:hover {
+    background-color: #ff6f00;
+}
+/* Section des cartes */
+.cards-section {
+    padding: 40px 0;
+    background-color: #0d0d0d;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    color: #ffffff;
+    font-size: 24px;
+    padding: 15px 25px;
+    background-color: #1a1a1a;
+    border: 2px solid #ff6f00;
+    border-radius: 8px;
+}
+
+.voir-suite-btn {
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 2px solid #ff6f00;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voir-suite-btn:hover {
+    background-color: #ff6f00;
+}
+
+/* Grille de cartes */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Carte individuelle */
+.card {
+    background-color: #2a2a2a;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 111, 0, 0.3);
+}
+
+/* Image de la carte */
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badges sur l'image */
+.badge-hd {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.badge-note {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 12px;
+    background-color: #1a1a1a;
+    color: #ff6f00;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #ff6f00;
+    border-radius: 4px;
+}
+
+.badge-langue {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 12px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Contenu de la carte */
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Badges de type */
+.badge-type {
+    padding: 6px 15px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.badge-type.anime {
+    background-color: #3a5a7a;
+}
+
+.badge-type.film {
+    background-color: #6a4a7a;
+}
+
+.badge-type.serie {
+    background-color: #7a5a3a;
+}
+
+.card-date {
+    color: #b0b0b0;
+    font-size: 12px;
+}
+
+.card-synopsis {
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Bouton "Voir plus" */
+.btn-voir-plus {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    color: #ff6f00;
+    border: 2px solid #ff6f00;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-voir-plus:hover {
+    background-color: #ff6f00;
+    color: #ffffff;
+}
+
